@@ -2,6 +2,13 @@
 you'll learn about it later. */
 @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
 
+/* Change: Set box-sizing to border box and reset margins and padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   background: #eee;
@@ -12,6 +19,20 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+/* Change: Add padding to header to enforce spacing rule, align and justify content */
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* Change: Use added HTML classes to separate right and left elements and enforce spacing on both sides*/
+.left, 
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .profile-image {
@@ -41,8 +62,13 @@ a {
   /* this removes the line under our links */
   text-decoration: none;
   color: rebeccapurple;
+  /* Change: Use flexbox for positioning and enforce spacing rule between links */
+  display: flex;
+  margin: 16px;
 }
 
 ul {
   list-style-type: none;
+  /* Change: Use flexbox for positioning */
+  display: flex;
 }
