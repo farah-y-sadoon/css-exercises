@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 html, body {
   height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Roboto, sans-serif;
-  margin: 0;
   background: #aaa;
   color: #333;
   /* I'll give you this one for free lol */
@@ -18,8 +22,10 @@ body {
 .modal {
   background: white;
   width: 480px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
 }
 
 .icon {
@@ -33,6 +39,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: none;
+  flex: none;
+  padding: 5px;
+
+}
+
+.content {
+  margin-left: 10px;
+}
+
+.header {
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .close-button {
@@ -47,7 +71,6 @@ body {
   align-items: center;
   justify-content: center;
   border: 1px solid #eee;
-  padding: 0;
 }
 
 button {
@@ -60,6 +83,8 @@ button.continue {
   background: royalblue;
   border: 1px solid royalblue;
   color: white;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 button.cancel {
