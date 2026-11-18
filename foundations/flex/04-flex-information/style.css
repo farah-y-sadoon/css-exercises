@@ -1,4 +1,3 @@
-/* Change: Set box sizing to border-box and reset margins and padding */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,28 +5,23 @@
 }
 body {
   font-family: 'Courier New', Courier, monospace;
-  /* Change: add flex display and center */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* Change: remove flex styling here because body does not have a defined height */
+  /* Change: align text instead */
+  text-align: center;
 }
 
-/* Change: add styling for all-cards container */
 .all-cards {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* Change: remove align-items, only need to be centered horizontally */
   gap: 52px;
 }
 
-/* Change: add styling for each card (img + text) */
+/* Change: remove flex styling for each card because wrap has no impact here */
+/* Change: replace width with max-width */
 .card {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  max-width: 200px;
+
 }
 img {
   width: 100px;
@@ -38,9 +32,7 @@ img {
   font-size: 36px;
   font-weight: 900;
   margin-bottom: 32px;
-  /* Change: center title */
-  display: flex;
-  justify-content: center;
+  /* Change: remove flex styling and just center title on the page in the body */
 
 }
 
